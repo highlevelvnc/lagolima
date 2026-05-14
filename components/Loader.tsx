@@ -38,8 +38,8 @@ export default function Loader() {
         <Image
           src="/logo.png"
           alt="LAGO LIMA"
-          width={1492}
-          height={1022}
+          width={360}
+          height={188}
           priority
           sizes="(max-width: 600px) 220px, 320px"
           className="loader-logo"
