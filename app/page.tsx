@@ -17,6 +17,7 @@ import Loader from "@/components/Loader";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 import Marquee from "@/components/Marquee";
+import PartnerServices from "@/components/PartnerServices";
 
 export default function HomePage() {
   return (
@@ -29,6 +30,7 @@ export default function HomePage() {
         <Hero />
         <Impact />
         <Services />
+        <PartnerServices />
         <Marquee />
         <ResistantSurfaces />
         <ParallaxBanner />

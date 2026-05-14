@@ -393,6 +393,44 @@ p { overflow-wrap: break-word; }
 
 .i { display: inline-block; width: 20px; height: 20px; flex-shrink: 0; }
 
+/* ---------- Partner Services (PC Work Vertical) ---------- */
+.partner { background: linear-gradient(180deg, var(--paper), #f0eded); position: relative; }
+.partner::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 60%; max-width: 600px; height: 1px; background: linear-gradient(90deg, transparent, var(--green-500), transparent); }
+.partner-head { text-align: center; max-width: 760px; margin: 0 auto 56px; }
+.partner-head .eyebrow { justify-content: center; display: inline-flex; }
+.partner-head h2 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.08; }
+.partner-head h2 em { color: var(--green-600); font-style: normal; }
+.partner-head p { color: #43474f; font-size: 16.5px; margin-top: 18px; }
+.partner-head p strong { color: var(--navy-900); font-weight: 700; }
+
+.partner-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 900px) { .partner-grid { grid-template-columns: 1fr; gap: 14px; } }
+
+.partner-card { background: var(--white); border-radius: 12px; overflow: hidden; border: 1px solid #e5e2e1; display: flex; flex-direction: column; transition: transform .35s var(--easing), border-color .25s, box-shadow .4s var(--easing); }
+.partner-card:hover { transform: translateY(-4px); border-color: var(--navy-800); box-shadow: 0 20px 40px -16px rgba(0,20,48,.15); }
+@media (hover: none) { .partner-card:hover { transform: none; } }
+
+.partner-card-img { position: relative; aspect-ratio: 16/10; background: #1c1b1b center/cover; overflow: hidden; }
+.partner-card-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,10,28,.7)); }
+.partner-card-num { position: absolute; top: 14px; left: 14px; font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.2em; color: rgba(255,255,255,.85); background: rgba(0,10,28,.55); padding: 6px 10px; border-radius: 4px; backdrop-filter: blur(8px); z-index: 2; }
+.partner-card-tag { position: absolute; bottom: 14px; left: 14px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-400); z-index: 2; }
+
+.partner-card-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.partner-card-body h3 { font-size: 19px; color: var(--navy-900); }
+.partner-card-body p { font-size: 14px; color: #43474f; line-height: 1.6; margin: 0; }
+.partner-specs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; padding-top: 12px; border-top: 1px solid #e5e2e1; }
+.partner-specs span { font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy-900); background: rgba(0,20,48,.06); padding: 5px 9px; border-radius: 99px; }
+
+.partner-footer { margin-top: 48px; padding: 28px 32px; background: var(--navy-900); color: var(--white); border-radius: 12px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; position: relative; overflow: hidden; }
+.partner-footer::before { content: ""; position: absolute; top: -40%; right: -10%; width: 380px; height: 380px; background: radial-gradient(circle, rgba(126,209,58,.2), transparent 60%); filter: blur(40px); }
+.partner-footer > * { position: relative; z-index: 2; }
+.partner-footer .partner-label { display: block; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-400); margin-bottom: 6px; }
+.partner-footer .partner-name { display: block; font-family: var(--font-display), sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 0.01em; color: var(--white); }
+.partner-footer .partner-tag { display: block; font-size: 13.5px; color: rgba(255,255,255,.7); margin-top: 4px; }
+.partner-footer .btn { color: var(--white); box-shadow: inset 0 0 0 1px rgba(255,255,255,.3); }
+.partner-footer .btn:hover { background: var(--green-400); color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--green-400); }
+@media (max-width: 700px) { .partner-footer { padding: 22px; } .partner-footer .btn { width: 100%; justify-content: center; } }
+
 /* ---------- Scroll progress (topo) ---------- */
 .scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 90; background: transparent; pointer-events: none; }
 .scroll-progress-fill { height: 100%; background: linear-gradient(90deg, var(--green-500), var(--green-400)); box-shadow: 0 0 12px rgba(127,209,58,.6); transition: width .12s linear; }
