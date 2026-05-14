@@ -3,38 +3,22 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 /**
- * Loading screen temática: simula a aplicação técnica de um pavimento.
- *  - Fundo navy escuro (cor da marca)
- *  - 3 camadas inferiores (gravilha / base / acabamento) que sobem em sequência
- *  - "Scan/trowel" horizontal que percorre o logo, sugerindo aplicação de microcimento
- *  - Logo real centrado num cartão branco para preservar contraste
+ * Loading screen temática (camadas de pavimento + scan estilo aplicação técnica).
  *
- * Dismiss: max(800ms, window.load). Após hide, ignora cliques (pointer-events:none).
+ * Importante: dismiss não depende de `window.load` — corre exclusivamente em
+ * `useEffect` (que dispara após primeira pintura). Mínimo 600ms para suavizar,
+ * safety de 1800ms. Garante que NUNCA fica preso, mesmo que algum recurso
+ * externo demore a carregar.
  */
 export default function Loader() {
   const [hide, setHide] = useState(false);
   const [removed, setRemoved] = useState(false);
 
   useEffect(() => {
-    const start = performance.now();
-    const minMs = 800;
-
-    const dismiss = () => {
-      const elapsed = performance.now() - start;
-      const wait = Math.max(0, minMs - elapsed);
-      window.setTimeout(() => setHide(true), wait);
-    };
-
-    if (document.readyState === "complete") dismiss();
-    else window.addEventListener("load", dismiss, { once: true });
-
-    // safety: nunca deixar o loader visível mais de 4s
-    const safety = window.setTimeout(() => setHide(true), 4000);
-
-    return () => {
-      window.removeEventListener("load", dismiss);
-      window.clearTimeout(safety);
-    };
+    const minMs = 600;
+    const t = window.setTimeout(() => setHide(true), minMs);
+    const safety = window.setTimeout(() => setHide(true), 1800);
+    return () => { window.clearTimeout(t); window.clearTimeout(safety); };
   }, []);
 
   useEffect(() => {
@@ -50,15 +34,15 @@ export default function Loader() {
       <div className="loader-bg" />
       <div className="loader-grid" />
 
-      <div className="loader-card">
+      <div className="loader-stage">
         <Image
           src="/logo.png"
           alt="LAGO LIMA"
-          width={1536}
-          height={1024}
+          width={1492}
+          height={1022}
           priority
           sizes="(max-width: 600px) 220px, 320px"
-          style={{ width: "auto", height: "auto", maxWidth: "320px", maxHeight: "180px" }}
+          className="loader-logo"
         />
         <div className="loader-scan" aria-hidden />
       </div>
