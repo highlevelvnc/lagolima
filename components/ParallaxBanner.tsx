@@ -1,7 +1,9 @@
 export default function ParallaxBanner() {
   return (
     <section className="banner">
-      <div className="banner-bg parallax-bg" aria-hidden />
+      <div className="banner-bg parallax-bg" aria-hidden>
+        <div className="banner-img ken-burns" />
+      </div>
       <div className="banner-inner">
         <span className="eyebrow on-dark" style={{ justifyContent: "center" }} data-reveal>
           Engenharia de Superfícies

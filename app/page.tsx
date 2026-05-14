@@ -14,17 +14,22 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollEffects from "@/components/ScrollEffects";
 import Loader from "@/components/Loader";
+import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
+import Marquee from "@/components/Marquee";
 
 export default function HomePage() {
   return (
     <>
       <Loader />
+      <ScrollProgress />
       <a className="skip-link" href="#main">Saltar para o conteúdo</a>
       <Header />
       <main id="main">
         <Hero />
         <Impact />
         <Services />
+        <Marquee />
         <ResistantSurfaces />
         <ParallaxBanner />
         <Applications />
@@ -36,6 +41,7 @@ export default function HomePage() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <BackToTop />
       <ScrollEffects />
     </>
   );

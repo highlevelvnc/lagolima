@@ -10,8 +10,18 @@ export default function Hero() {
       <div className="container-x hero-inner">
         <div>
           <span className="hero-eyebrow" data-reveal>PAVIMENTOS TÉCNICOS · PORTUGAL</span>
-          <h1 data-reveal>
-            Pavimentos técnicos, <em className="accent">desportivos</em> e industriais com acabamento profissional.
+          <h1 className="hero-h1">
+            {["Pavimentos", "técnicos,"].map((w, i) => (
+              <span className="word" key={i} style={{ ["--d" as any]: `${i * 70}ms` }}>{w} </span>
+            ))}
+            <em className="accent word" style={{ ["--d" as any]: "140ms" }}>desportivos </em>
+            {["e", "industriais"].map((w, i) => (
+              <span className="word" key={`b${i}`} style={{ ["--d" as any]: `${(i + 3) * 70}ms` }}>{w} </span>
+            ))}
+            <br />
+            {["com", "acabamento", "profissional."].map((w, i) => (
+              <span className="word" key={`c${i}`} style={{ ["--d" as any]: `${(i + 5) * 70}ms` }}>{w} </span>
+            ))}
           </h1>
           <p className="lead" data-reveal>
             Soluções duradouras em pavimentos desportivos, microcimento, impermeabilização e relva artificial para obras exigentes em Portugal.
