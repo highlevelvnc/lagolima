@@ -57,13 +57,11 @@ export const DICT = {
         "relva-artificial": { title: "Relva Artificial", desc: "Aplicação em campos, jardins e zonas exteriores. Estética natural sem manutenção exigente." }
       }
     },
-    partner: {
-      eyebrow: "Parceria",
-      title: "Soluções complementares",
-      titleAccent: "em altura",
-      lead: "Em parceria com a {name}, oferecemos também serviços de fachadas, isolamento térmico e reabilitação estrutural — um único interlocutor para obras de maior complexidade.",
-      label: "Em parceria com",
-      visit: "Visitar pcworkvertical.pt",
+    extras: {
+      eyebrow: "Soluções Complementares",
+      title: "Para além do pavimento,",
+      titleAccent: "a obra completa",
+      lead: "Oferecemos também serviços de fachadas, isolamento térmico e reabilitação estrutural — para responder a obras mais exigentes com um único interlocutor.",
       items: {
         "isolamento": { tag: "Isolamento", title: "Isolamento de Fachadas", desc: "Sistemas térmicos e acústicos de alta performance (ETICS / Cappotto), com eficiência energética e durabilidade certificada." },
         "remodelacao": { tag: "Interiores", title: "Remodelação", desc: "Transformação de espaços com acabamentos premium e execução técnica rigorosa para projetos residenciais e comerciais." },
@@ -263,13 +261,11 @@ export const DICT = {
         "relva-artificial": { title: "Artificial Turf", desc: "Installation in fields, gardens and outdoor areas. Natural look with minimal maintenance." }
       }
     },
-    partner: {
-      eyebrow: "Partnership",
-      title: "Complementary solutions",
-      titleAccent: "at height",
-      lead: "Together with {name}, we also offer facade work, thermal insulation and structural rehabilitation — a single point of contact for more complex projects.",
-      label: "In partnership with",
-      visit: "Visit pcworkvertical.pt",
+    extras: {
+      eyebrow: "Complementary Solutions",
+      title: "Beyond flooring,",
+      titleAccent: "the full project",
+      lead: "We also deliver facade work, thermal insulation and structural rehabilitation — so demanding projects can move forward with a single point of contact.",
       items: {
         "isolamento": { tag: "Insulation", title: "Facade Insulation", desc: "High-performance thermal and acoustic systems (ETICS / Cappotto) with certified energy efficiency and durability." },
         "remodelacao": { tag: "Interiors", title: "Renovation", desc: "Space transformation with premium finishes and rigorous technical execution for residential and commercial projects." },
@@ -469,13 +465,11 @@ export const DICT = {
         "relva-artificial": { title: "Kunstrasen", desc: "Verlegung auf Spielfeldern, in Gärten und Außenbereichen. Natürlicher Look bei minimalem Pflegeaufwand." }
       }
     },
-    partner: {
-      eyebrow: "Partnerschaft",
-      title: "Ergänzende Lösungen",
-      titleAccent: "in der Höhe",
-      lead: "Gemeinsam mit {name} bieten wir auch Fassadenarbeiten, Wärmedämmung und Bausanierung — ein einziger Ansprechpartner für komplexere Bauvorhaben.",
-      label: "In Partnerschaft mit",
-      visit: "pcworkvertical.pt besuchen",
+    extras: {
+      eyebrow: "Ergänzende Lösungen",
+      title: "Über den Boden hinaus —",
+      titleAccent: "das gesamte Bauvorhaben",
+      lead: "Wir liefern auch Fassadenarbeiten, Wärmedämmung und Bausanierung, damit anspruchsvolle Projekte mit nur einem Ansprechpartner umgesetzt werden können.",
       items: {
         "isolamento": { tag: "Dämmung", title: "Fassadendämmung", desc: "Hochleistungs-Dämmsysteme thermisch und akustisch (ETICS / Cappotto) mit zertifizierter Energieeffizienz und Langlebigkeit." },
         "remodelacao": { tag: "Innenausbau", title: "Renovierung", desc: "Raumtransformation mit Premium-Oberflächen und präziser technischer Ausführung für Wohn- und Gewerbeprojekte." },

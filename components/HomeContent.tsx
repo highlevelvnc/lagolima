@@ -17,7 +17,7 @@ import Loader from "@/components/Loader";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 import Marquee from "@/components/Marquee";
-import PartnerServices from "@/components/PartnerServices";
+import ExtraServices from "@/components/ExtraServices";
 import SkipLink from "@/components/SkipLink";
 import MagneticButtons from "@/components/MagneticButtons";
 
@@ -32,7 +32,7 @@ export default function HomeContent() {
         <Hero />
         <Impact />
         <Services />
-        <PartnerServices />
+        <ExtraServices />
         <Marquee />
         <ResistantSurfaces />
         <ParallaxBanner />
