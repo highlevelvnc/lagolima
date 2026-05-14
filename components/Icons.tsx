@@ -1,12 +1,12 @@
 import type { SVGProps } from "react";
 
 const base = (p: SVGProps<SVGSVGElement>) => ({
-  className: "i " + (p.className || ""),
   viewBox: "0 0 24 24",
   fill: "none",
   stroke: "currentColor",
   strokeWidth: 2,
-  ...p
+  ...p,
+  className: ("i " + (p.className || "")).trim()
 });
 
 export const ArrowRight = (p: SVGProps<SVGSVGElement>) => (

@@ -54,7 +54,7 @@ export default function Header() {
 
       <aside className={`drawer${open ? " open" : ""}`} aria-hidden={!open} role="dialog">
         <div className="drawer-top">
-          <Brand withTagline={false} />
+          <Brand height={34} />
           <button className="menu-btn" onClick={() => setOpen(false)} aria-label="Fechar menu" style={{ display: "grid" }}>
             <Close />
           </button>
