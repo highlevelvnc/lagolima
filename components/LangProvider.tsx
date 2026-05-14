@@ -34,7 +34,7 @@ export function LangProvider({ initialLang, children }: { initialLang: Lang; chi
     if (l === lang) return;
     // Mantém âncora (#contactos, etc.) na navegação entre línguas
     const hash = typeof window !== "undefined" ? window.location.hash : "";
-    const target = l === "en" ? "/en" : "/";
+    const target = l === "pt" ? "/" : `/${l}`;
     router.push(`${target}${hash}`);
   };
 

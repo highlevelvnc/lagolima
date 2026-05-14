@@ -1,5 +1,5 @@
-export type Lang = "pt" | "en";
-export const LANGS: Lang[] = ["pt", "en"];
+export type Lang = "pt" | "en" | "de";
+export const LANGS: Lang[] = ["pt", "en", "de"];
 export const DEFAULT_LANG: Lang = "pt";
 
 type Dict = typeof DICT.pt;
@@ -416,6 +416,212 @@ export const DICT = {
     skipLink: "Skip to content",
     backToTop: "Back to top",
     wa: "Chat on WhatsApp"
+  },
+  de: {
+    nav: {
+      home: "Start",
+      services: "Leistungen",
+      projects: "Projekte",
+      process: "Ablauf",
+      about: "Über uns",
+      contact: "Kontakt",
+      cta: "Angebot anfordern"
+    },
+    hero: {
+      eyebrow: "TECHNISCHE BÖDEN · PORTUGAL",
+      titleWords: [
+        { text: "Technische" },
+        { text: "Böden" },
+        { text: "für" },
+        { text: "Sport,", accent: true },
+        { text: "Industrie" },
+        { text: "und" },
+        { text: "professionelle" },
+        { text: "Oberflächen." }
+      ],
+      lead: "Langlebige Lösungen in Sportböden, Mikrozement, Abdichtungen und Kunstrasen für anspruchsvolle Projekte in ganz Portugal.",
+      ctaPrimary: "Angebot anfordern",
+      ctaSecondary: "Leistungen ansehen",
+      metaA: "Fachgebiet",
+      metaAValue: "Technische Böden",
+      metaB: "Einsatz",
+      metaBValue: "Sport · Industrie",
+      metaC: "Tätigkeitsgebiet",
+      metaCValue: "Festland-Portugal",
+      scroll: "scrollen"
+    },
+    impact: [
+      { lbl: "01 — Projekt", title: "Maß-", accent: "geschneidert", desc: "Jeder Raum wird mit der passenden technischen Lösung bewertet und geplant." },
+      { lbl: "02 — Materialien", title: "Beständige", accent: "Lösungen", desc: "Materialien, ausgewählt für intensive Nutzung, Außen- und Industriebereiche." },
+      { lbl: "03 — Ausführung", title: "Professionelle", accent: "Verarbeitung", desc: "Sorgfältige Ausführung mit Liebe zum Detail und termingerechter Lieferung." },
+      { lbl: "04 — Team", title: "Technische", accent: "Expertise", desc: "Spezialisierte Crew für Sport-, Industrie- und Spezialböden." }
+    ],
+    services: {
+      eyebrow: "Leistungen",
+      title: "Technische Oberflächen für jede Anforderung.",
+      lead: "Vom Sportplatz bis zur Industriehalle, vom Eigenheim bis zur Geschäftsfläche — Komplettlösungen mit professioneller Ausführung.",
+      more: "Mehr erfahren",
+      items: {
+        "pavimentos-desportivos": { title: "Sportböden", desc: "Oberflächen für Spielfelder, Courts und Hallen. Griffigkeit, Stoßdämpfung und Langlebigkeit für intensiven Einsatz." },
+        "pavimentos-industriais": { title: "Industrieböden", desc: "Technische Harze und fugenlose Beläge für Hallen, Lager und Bereiche mit hoher mechanischer Belastung." },
+        "microcimento": { title: "Mikrozement", desc: "Fugenlose, moderne Oberflächen für Böden und Wände. Hochwertige Ästhetik mit hoher Beständigkeit." },
+        "impermeabilizacao": { title: "Abdichtung", desc: "Dächer, Terrassen, Balkone und Fundamente. Vollständiger Schutz gegen Eindringen von Wasser und Feuchtigkeit." },
+        "relva-artificial": { title: "Kunstrasen", desc: "Verlegung auf Spielfeldern, in Gärten und Außenbereichen. Natürlicher Look bei minimalem Pflegeaufwand." }
+      }
+    },
+    partner: {
+      eyebrow: "Partnerschaft",
+      title: "Ergänzende Lösungen",
+      titleAccent: "in der Höhe",
+      lead: "Gemeinsam mit {name} bieten wir auch Fassadenarbeiten, Wärmedämmung und Bausanierung — ein einziger Ansprechpartner für komplexere Bauvorhaben.",
+      label: "In Partnerschaft mit",
+      visit: "pcworkvertical.pt besuchen",
+      items: {
+        "isolamento": { tag: "Dämmung", title: "Fassadendämmung", desc: "Hochleistungs-Dämmsysteme thermisch und akustisch (ETICS / Cappotto) mit zertifizierter Energieeffizienz und Langlebigkeit." },
+        "remodelacao": { tag: "Innenausbau", title: "Renovierung", desc: "Raumtransformation mit Premium-Oberflächen und präziser technischer Ausführung für Wohn- und Gewerbeprojekte." },
+        "reabilitacao": { tag: "Struktur", title: "Sanierung", desc: "Ästhetische und funktionale Restaurierung von Gebäuden — Denkmalschutz und strukturelle Verstärkung mit zertifizierten Materialien." }
+      }
+    },
+    resist: {
+      eyebrow: "Technisches Versprechen",
+      title1: "Oberflächen, die bleiben.",
+      title2: "Verarbeitung,",
+      title2Suffix: "die überzeugt.",
+      lead: "Jedes Projekt verlangt die richtige Antwort. LAGO LIMA verbindet technische Analyse, passende Materialien und professionelle Ausführung, um dauerhafte, ästhetisch gepflegte Oberflächen zu schaffen.",
+      benefits: [
+        { idx: "/01", title: "Widerstandsfähigkeit und Langlebigkeit", desc: "Materialien und Aufbauten, abgestimmt auf intensive, langfristige Nutzung." },
+        { idx: "/02", title: "Spezialisierte technische Ausführung", desc: "Eine Crew, geschult in fugenlosen, Sport- und Industrieböden." },
+        { idx: "/03", title: "An den Raum angepasste Lösungen", desc: "Jedes Projekt beginnt mit einer gründlichen Bewertung von Standort und Nutzung." },
+        { idx: "/04", title: "Materialien passend zur Nutzung", desc: "Technische Spezifikation nach Last, Exposition und Verkehr." },
+        { idx: "/05", title: "Saubere, professionelle Verarbeitung", desc: "Liebe zum Detail bei Fugen, Anschlüssen und Endoberflächen." },
+        { idx: "/06", title: "Termintreue", desc: "Realistische Planung, Lieferung im vereinbarten Zeitrahmen." }
+      ]
+    },
+    banner: {
+      eyebrow: "Oberflächentechnik",
+      title1: "Wir bauen Oberflächen, geschaffen für",
+      titleAccent: "intensive Nutzung",
+      title2: ", Leistung und Langlebigkeit.",
+      marks: ["RUTSCHHEMMEND", "UV-BESTÄNDIG", "HOCHBELASTBAR", "GRIFFIG"]
+    },
+    applications: {
+      eyebrow: "Anwendungsbereiche",
+      title: "Für Räume, die mehr verlangen als nur eine Oberfläche.",
+      lead: "Lösungen für unterschiedliche Kontexte, vom Sport bis zum Privatbereich.",
+      items: [
+        { tag: "/ 01 SPORT", title: "Sportplätze", desc: "Technische Böden für Fußball, Padel, Basketball und mehrere Disziplinen." },
+        { tag: "/ 02 INDUSTRIE", title: "Industriehallen", desc: "Harze und fugenlose Beläge für hohe Lasten." },
+        { tag: "/ 03 LOGISTIK", title: "Lagerhallen", desc: "Oberflächen, gerüstet für intensiven Verkehr und schweren Betrieb." },
+        { tag: "/ 04 BILDUNG", title: "Schulen und Vereine", desc: "Pausenhöfe, Mehrzwecksportplätze und Hallen für den täglichen Einsatz." },
+        { tag: "/ 05 WOHNEN", title: "Wohnbereiche", desc: "Mikrozement, wasserdichte Terrassen und fugenlose Oberflächen." },
+        { tag: "/ 06 HANDEL", title: "Geschäftsflächen", desc: "Böden mit hochwertiger Ästhetik und hoher Verschleißfestigkeit." },
+        { tag: "/ 07 AUSSEN", title: "Außenbereiche", desc: "Oberflächen, beständig gegen Regen, Sonne und Temperaturschwankungen." },
+        { tag: "/ 08 GARTEN", title: "Gärten mit Kunstrasen", desc: "Ästhetische, langlebige Lösung mit minimalem Pflegeaufwand." }
+      ]
+    },
+    process: {
+      eyebrow: "Wie wir arbeiten",
+      title: "Vier Schritte zu einer Oberfläche, die hält.",
+      lead: "Ein klarer Ablauf, vom ersten Vor-Ort-Termin bis zur endgültigen Übergabe.",
+      steps: [
+        { title: "Standortbewertung", desc: "Technischer Besuch, Untergrundbewertung, Bedarfs- und Nutzungsanalyse." },
+        { title: "Lösungsvorschlag", desc: "Technisches Angebot mit passendem Material, Aufbau und detaillierter Kostenschätzung." },
+        { title: "Vorbereitung der Oberfläche", desc: "Untergrundbehandlung, Nivellierung und Grundierung für Haftung und Langlebigkeit." },
+        { title: "Verlegung und Übergabe", desc: "Ausführung durch spezialisiertes Team, Qualitätskontrolle und finale Übergabe." }
+      ]
+    },
+    projects: {
+      eyebrow: "Projekte",
+      title: "Technische Arbeit in unterschiedlichen Kontexten.",
+      lead: "Eine Auswahl an Typologien und Umgebungen, in denen LAGO LIMA tätig ist.",
+      filters: ["Alle", "Sport", "Industrie", "Mikrozement", "Abdichtung", "Kunstrasen"] as const,
+      items: {
+        p1: { title: "Premium-Mehrzweckhalle", category: "Sport" },
+        p2: { title: "Hallensanierung", category: "Industrie" },
+        p3: { title: "Glänzende fugenlose Oberfläche", category: "Mikrozement" },
+        p4: { title: "Pool- und Außenbereich", category: "Abdichtung" },
+        p5: { title: "Kunstrasenspielfeld", category: "Kunstrasen" },
+        p6: { title: "Mehrzweck-Sportplatz im Freien", category: "Sport" },
+        p7: { title: "Technischer Industrieboden", category: "Industrie" },
+        p8: { title: "Garten mit Kunstrasen", category: "Kunstrasen" },
+        p9: { title: "Wasserdichte Terrasse", category: "Abdichtung" }
+      }
+    },
+    about: {
+      eyebrow: "Über uns",
+      title: "Bodentechnik. Verantwortung für jeden Quadratmeter.",
+      lead: "LAGO LIMA realisiert Sport- und Industrieböden und liefert technische Lösungen in Mikrozement, Abdichtung und Kunstrasen. Mit Fokus auf Beständigkeit, Verarbeitung und Ausführungsqualität entwickeln wir auf den jeweiligen Raum zugeschnittene Lösungen.",
+      chips: ["Mikrozement", "Harz", "Abdichtung", "Rasen"],
+      values: [
+        { label: "Qualität" },
+        { label: "Beständigkeit" },
+        { label: "Vertrauen" },
+        { label: "Präzision" },
+        { label: "Langlebigkeit" }
+      ]
+    },
+    cta: {
+      eyebrow: "Nächster Schritt",
+      title1: "Haben Sie ein",
+      titleAccent: "Projekt",
+      title2: "im Blick?",
+      lead: "Kontaktieren Sie uns und erhalten Sie ein Angebot, abgestimmt auf Raum, Ziel und Budget.",
+      primary: "Angebot anfordern",
+      whatsapp: "Per WhatsApp schreiben"
+    },
+    contact: {
+      eyebrow: "Kontakt",
+      title: "Holen Sie sich ein Angebot für Ihr Projekt.",
+      lead: "Füllen Sie das Formular möglichst ausführlich aus. Wir antworten mit einem passenden technischen Angebot.",
+      labels: {
+        name: "Name",
+        phone: "Telefon",
+        email: "E-Mail",
+        location: "Ort",
+        service: "Leistung",
+        message: "Nachricht"
+      },
+      placeholders: {
+        name: "Ihr Name",
+        phone: "+351 9XX XXX XXX",
+        email: "email@beispiel.de",
+        location: "Stadt / Bezirk",
+        message: "Beschreiben Sie den Raum, die ungefähre Fläche und den gewünschten Zeitraum..."
+      },
+      serviceOptions: [
+        "Sportböden",
+        "Industrieböden",
+        "Mikrozement",
+        "Abdichtung",
+        "Kunstrasen",
+        "Sonstiges / Kombiniert"
+      ],
+      submit: "Anfrage senden",
+      sent: "Anfrage erhalten — vielen Dank!",
+      side: {
+        sub: "Mit dem Team sprechen",
+        title: "Wir besprechen Ihr Projekt gerne mit Ihnen.",
+        phoneLbl: "Telefon / WhatsApp",
+        emailLbl: "E-Mail",
+        coverageLbl: "Tätigkeitsgebiet",
+        coverageVal: "Festland-Portugal",
+        replyLbl: "Antwortzeit",
+        replyVal: "Innerhalb von 24 Werkstunden"
+      }
+    },
+    footer: {
+      desc: "Sport- und Industrieböden.\nMikrozement · Abdichtung · Kunstrasen.",
+      tagline: "Wir bauen Oberflächen. Wir liefern Ergebnisse.",
+      navTitle: "Navigation",
+      servicesTitle: "Leistungen",
+      contactTitle: "Kontakt",
+      rights: "Alle Rechte vorbehalten",
+      ribbon: "PT · Technische Böden"
+    },
+    loader: { status: "Oberflächen vorbereiten" },
+    skipLink: "Zum Inhalt springen",
+    backToTop: "Nach oben",
+    wa: "Per WhatsApp schreiben"
   }
 } as const;
 
