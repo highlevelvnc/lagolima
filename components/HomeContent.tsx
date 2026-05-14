@@ -21,7 +21,7 @@ import PartnerServices from "@/components/PartnerServices";
 import SkipLink from "@/components/SkipLink";
 import MagneticButtons from "@/components/MagneticButtons";
 
-export default function HomePage() {
+export default function HomeContent() {
   return (
     <>
       <Loader />
