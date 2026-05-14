@@ -23,10 +23,13 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
-  { id: "p1", title: "Pavimento de campo desportivo", category: "Desportivo", image: "https://images.unsplash.com/photo-1444459094717-a39f1e3e0903?q=80&w=1400&auto=format&fit=crop", size: "lg" },
-  { id: "p2", title: "Pavimento de pavilhão técnico", category: "Industrial", image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1200&auto=format&fit=crop", size: "md" },
-  { id: "p3", title: "Acabamento contínuo interior", category: "Microcimento", image: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=1200&auto=format&fit=crop", size: "sm" },
-  { id: "p4", title: "Cobertura técnica", category: "Impermeabilização", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop", size: "sm" },
-  { id: "p5", title: "Aplicação em zona exterior", category: "Relva Artificial", image: "https://images.unsplash.com/photo-1592991538534-00b298f49f6f?q=80&w=1200&auto=format&fit=crop", size: "md" },
-  { id: "p6", title: "Superfície multi-uso", category: "Desportivo", image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=1200&auto=format&fit=crop", size: "lg" }
+  { id: "p1", title: "Pavilhão multiuso premium", category: "Desportivo", image: "/projetos/sport-arena.jpg", size: "lg" },
+  { id: "p2", title: "Transformação de pavilhão", category: "Industrial", image: "/projetos/sport-pavilhao-transformacao.jpg", size: "md" },
+  { id: "p3", title: "Acabamento contínuo brilhante", category: "Microcimento", image: "/projetos/micro-interior-glossy.jpg", size: "sm" },
+  { id: "p4", title: "Piscina e área exterior", category: "Impermeabilização", image: "/projetos/water-piscina-pedra.jpg", size: "sm" },
+  { id: "p5", title: "Campo de relva sintética", category: "Relva Artificial", image: "/projetos/turf-campo-detalhe.jpg", size: "md" },
+  { id: "p6", title: "Polidesportivo exterior", category: "Desportivo", image: "/projetos/sport-polidesportivo.jpg", size: "lg" },
+  { id: "p7", title: "Pavimento industrial técnico", category: "Industrial", image: "/projetos/industrial-pavilhao.jpg", size: "md" },
+  { id: "p8", title: "Jardim com relva artificial", category: "Relva Artificial", image: "/projetos/turf-casa.jpg", size: "sm" },
+  { id: "p9", title: "Terraço impermeabilizado", category: "Impermeabilização", image: "/projetos/water-piscina-moderna.jpg", size: "sm" }
 ];

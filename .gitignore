@@ -17,3 +17,6 @@ next-env.d.ts
 
 # stitch reference designs (não usado em runtime)
 /public/_stitch/
+
+# fotos originais do cliente (raws) — só as optimizadas em /projetos/ entram no repo
+/public/fotos/

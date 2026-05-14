@@ -14,7 +14,7 @@ export const SERVICES: Service[] = [
     num: "01 / SPORT",
     title: "Pavimentos Desportivos",
     desc: "Superfícies para campos, courts e pavilhões. Aderência, amortecimento e durabilidade para uso intensivo.",
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1400&auto=format&fit=crop",
+    image: "/projetos/sport-arena.jpg",
     icon: "sport",
     span: 2
   },
@@ -23,7 +23,7 @@ export const SERVICES: Service[] = [
     num: "02 / INDUSTRY",
     title: "Pavimentos Industriais",
     desc: "Resinas técnicas e pavimentos contínuos para pavilhões, armazéns e espaços com elevada carga mecânica.",
-    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=1400&auto=format&fit=crop",
+    image: "/projetos/industrial-pavilhao.jpg",
     icon: "industry",
     span: 2
   },
@@ -32,7 +32,7 @@ export const SERVICES: Service[] = [
     num: "03 / MICRO",
     title: "Microcimento",
     desc: "Acabamento contínuo e moderno para pavimentos e paredes. Estética premium com alta resistência.",
-    image: "https://images.unsplash.com/photo-1596079890744-c1a0462d0975?q=80&w=1400&auto=format&fit=crop",
+    image: "/projetos/micro-interior-glossy.jpg",
     icon: "micro",
     span: 2
   },
@@ -41,7 +41,7 @@ export const SERVICES: Service[] = [
     num: "04 / WATER",
     title: "Impermeabilização",
     desc: "Coberturas, terraços, varandas e fundações. Proteção total contra infiltrações e humidade.",
-    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=1400&auto=format&fit=crop",
+    image: "/projetos/water-piscina-casa.jpg",
     icon: "water",
     span: 3
   },
@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
     num: "05 / TURF",
     title: "Relva Artificial",
     desc: "Aplicação em campos, jardins e zonas exteriores. Estética natural sem manutenção exigente.",
-    image: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=1400&auto=format&fit=crop",
+    image: "/projetos/turf-campo-detalhe.jpg",
     icon: "turf",
     span: 3
   }
