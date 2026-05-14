@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Hanken_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { LangProvider } from "@/components/LangProvider";
 
 const display = Hanken_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-display", display: "swap" });
 const body = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-body", display: "swap" });
@@ -15,20 +16,26 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lagolima.pt"),
-  title: "LAGO LIMA | Pavimentos Desportivos e Industriais",
+  title: {
+    default: "LAGO LIMA | Pavimentos Desportivos e Industriais",
+    template: "%s · LAGO LIMA"
+  },
   description:
-    "Soluções profissionais em pavimentos desportivos e industriais, microcimento, impermeabilização e relva artificial em Portugal.",
+    "Soluções profissionais em pavimentos desportivos e industriais, microcimento, impermeabilização e relva artificial em Portugal. Sports flooring, microcement, waterproofing and artificial turf — Portugal.",
   keywords: [
-    "pavimentos desportivos",
-    "pavimentos industriais",
-    "microcimento",
-    "impermeabilização",
-    "relva artificial",
-    "Portugal"
+    "pavimentos desportivos", "pavimentos industriais", "microcimento",
+    "impermeabilização", "relva artificial", "Portugal",
+    "sports flooring", "industrial flooring", "microcement",
+    "waterproofing", "artificial turf"
   ],
+  alternates: {
+    canonical: "/",
+    languages: { "pt-PT": "/", "en": "/", "x-default": "/" }
+  },
   openGraph: {
     type: "website",
     locale: "pt_PT",
+    alternateLocale: ["en_GB"],
     title: "LAGO LIMA | Pavimentos Desportivos e Industriais",
     description:
       "Soluções profissionais em pavimentos desportivos e industriais, microcimento, impermeabilização e relva artificial em Portugal.",
@@ -39,7 +46,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-PT" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <LangProvider>{children}</LangProvider>
+      </body>
     </html>
   );
 }

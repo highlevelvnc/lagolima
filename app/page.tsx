@@ -18,13 +18,15 @@ import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 import Marquee from "@/components/Marquee";
 import PartnerServices from "@/components/PartnerServices";
+import SkipLink from "@/components/SkipLink";
+import MagneticButtons from "@/components/MagneticButtons";
 
 export default function HomePage() {
   return (
     <>
       <Loader />
       <ScrollProgress />
-      <a className="skip-link" href="#main">Saltar para o conteúdo</a>
+      <SkipLink />
       <Header />
       <main id="main">
         <Hero />
@@ -45,6 +47,7 @@ export default function HomePage() {
       <FloatingWhatsApp />
       <BackToTop />
       <ScrollEffects />
+      <MagneticButtons />
     </>
   );
 }

@@ -1,32 +1,30 @@
+"use client";
 import { VALUES } from "@/data/values";
 import { valueIcon } from "./Icons";
+import { useT } from "./LangProvider";
 
 export default function About() {
+  const { t } = useT();
   return (
     <section className="section about" id="sobre">
       <div className="container-x">
         <div className="about-grid">
-          <div className="about-img" data-reveal="left" role="img" aria-label="Aplicação técnica em obra">
+          <div className="about-img" data-reveal="left" role="img" aria-label="Technical application">
             <div className="about-tech">
-              <span>Microcimento</span>
-              <span>Resina</span>
-              <span>Impermeabilização</span>
-              <span>Relva</span>
+              {t.about.chips.map((c) => <span key={c}>{c}</span>)}
             </div>
           </div>
 
           <div data-reveal="right">
-            <span className="eyebrow">Sobre Nós</span>
-            <h2 style={{ marginTop: 14 }}>Engenharia de pavimentos. Compromisso com cada metro.</h2>
-            <p className="lead">
-              A LAGO LIMA atua na execução de pavimentos desportivos e industriais, oferecendo soluções técnicas em microcimento, impermeabilização e relva artificial. Com foco na resistência, no acabamento e na qualidade de execução, desenvolvemos soluções adaptadas às necessidades de cada espaço.
-            </p>
+            <span className="eyebrow">{t.about.eyebrow}</span>
+            <h2 style={{ marginTop: 14 }}>{t.about.title}</h2>
+            <p className="lead">{t.about.lead}</p>
 
             <div className="values">
-              {VALUES.map((v) => (
-                <div className="value" key={v.label}>
+              {VALUES.map((v, i) => (
+                <div className="value" key={v.icon}>
                   <span className="ico" aria-hidden>{valueIcon(v.icon)}</span>
-                  <span>{v.label}</span>
+                  <span>{t.about.values[i].label}</span>
                 </div>
               ))}
             </div>

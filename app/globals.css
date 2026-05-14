@@ -66,7 +66,8 @@ p { overflow-wrap: break-word; }
 }
 
 /* buttons */
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: var(--radius); font-family: var(--font-display), sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; transition: transform .25s var(--easing), background .25s var(--easing), color .25s var(--easing), box-shadow .25s var(--easing); will-change: transform; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: var(--radius); font-family: var(--font-display), sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; transition: transform .45s var(--easing), background .25s var(--easing), color .25s var(--easing), box-shadow .25s var(--easing); will-change: transform; }
+.btn.magnetic { transition: transform .35s var(--easing), background .25s var(--easing), color .25s var(--easing), box-shadow .25s var(--easing); }
 .btn .arrow { transition: transform .35s var(--easing); }
 .btn:hover .arrow { transform: translateX(4px); }
 .btn-primary { background: var(--green-400); color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--green-500); }
@@ -392,6 +393,15 @@ p { overflow-wrap: break-word; }
 .wa-tip::after { content: ""; position: absolute; right: -6px; top: 50%; transform: translateY(-50%) rotate(45deg); width: 12px; height: 12px; background: var(--navy-900); }
 
 .i { display: inline-block; width: 20px; height: 20px; flex-shrink: 0; }
+
+/* ---------- Language switcher ---------- */
+.lang-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border-radius: 99px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); font-family: var(--font-mono), monospace; }
+.lang-btn { padding: 6px 12px; border-radius: 99px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: rgba(255,255,255,.55); transition: color .2s, background .25s var(--easing); }
+.lang-btn:hover { color: rgba(255,255,255,.85); }
+.lang-btn.active { background: var(--green-400); color: var(--navy-900); }
+.lang-switch.compact { padding: 2px; }
+.lang-switch.compact .lang-btn { padding: 5px 10px; font-size: 10px; }
+@media (max-width: 1024px) { .header .lang-switch { display: none; } }
 
 /* ---------- Partner Services (PC Work Vertical) ---------- */
 .partner { background: linear-gradient(180deg, var(--paper), #f0eded); position: relative; }

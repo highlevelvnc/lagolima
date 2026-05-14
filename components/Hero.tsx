@@ -1,22 +1,9 @@
+"use client";
 import { ArrowRight } from "./Icons";
-
-/**
- * Palavras como spans inline-block com margin-right (não trailing whitespace),
- * para o browser quebrar a linha de forma previsível conforme o viewport.
- * Sem <br/> — deixa o fluxo natural responsivo.
- */
-const TITLE_WORDS: { text: string; accent?: boolean }[] = [
-  { text: "Pavimentos" },
-  { text: "técnicos," },
-  { text: "desportivos", accent: true },
-  { text: "e" },
-  { text: "industriais" },
-  { text: "com" },
-  { text: "acabamento" },
-  { text: "profissional." }
-];
+import { useT } from "./LangProvider";
 
 export default function Hero() {
+  const { t } = useT();
   return (
     <section className="hero" id="inicio">
       <div className="hero-grid-bg" />
@@ -25,29 +12,27 @@ export default function Hero() {
 
       <div className="container-x hero-inner">
         <div>
-          <span className="hero-eyebrow" data-reveal>PAVIMENTOS TÉCNICOS · PORTUGAL</span>
+          <span className="hero-eyebrow" data-reveal>{t.hero.eyebrow}</span>
           <h1 className="hero-h1">
-            {TITLE_WORDS.map((w, i) => (
+            {t.hero.titleWords.map((w, i) => (
               <span
                 key={i}
-                className={`word${w.accent ? " accent" : ""}`}
+                className={`word${("accent" in w && w.accent) ? " accent" : ""}`}
                 style={{ ["--d" as any]: `${i * 70}ms` }}
               >
                 {w.text}
               </span>
             ))}
           </h1>
-          <p className="lead" data-reveal>
-            Soluções duradouras em pavimentos desportivos, microcimento, impermeabilização e relva artificial para obras exigentes em Portugal.
-          </p>
+          <p className="lead" data-reveal>{t.hero.lead}</p>
           <div className="hero-actions" data-reveal>
-            <a href="#contactos" className="btn btn-primary">Pedir Orçamento <ArrowRight className="arrow" /></a>
-            <a href="#servicos" className="btn btn-ghost">Ver Serviços <ArrowRight className="arrow" /></a>
+            <a href="#contactos" className="btn btn-primary magnetic">{t.hero.ctaPrimary} <ArrowRight className="arrow" /></a>
+            <a href="#servicos" className="btn btn-ghost">{t.hero.ctaSecondary} <ArrowRight className="arrow" /></a>
           </div>
           <div className="hero-meta">
-            <div data-reveal><span>Especialidade</span><strong>Pavimentos Técnicos</strong></div>
-            <div data-reveal><span>Aplicação</span><strong>Desportivos · Industriais</strong></div>
-            <div data-reveal><span>Cobertura</span><strong>Portugal Continental</strong></div>
+            <div data-reveal><span>{t.hero.metaA}</span><strong>{t.hero.metaAValue}</strong></div>
+            <div data-reveal><span>{t.hero.metaB}</span><strong>{t.hero.metaBValue}</strong></div>
+            <div data-reveal><span>{t.hero.metaC}</span><strong>{t.hero.metaCValue}</strong></div>
           </div>
         </div>
 
@@ -56,17 +41,17 @@ export default function Hero() {
           <div className="hv-card hv-1 parallax" data-speed="0.06" aria-hidden />
           <div className="hv-card hv-2 parallax" data-speed="0.12" aria-hidden />
           <div className="hv-card hv-3 parallax" data-speed="0.18">
-            <div className="k">Resistência técnica</div>
-            <div className="v">Alta durabilidade</div>
+            <div className="k">{t.hero.metaA}</div>
+            <div className="v">{t.hero.metaAValue}</div>
             <div className="bar" role="presentation"><span /></div>
-            <div className="k" style={{ marginTop: 14 }}>Acabamento</div>
-            <div className="v">Profissional</div>
+            <div className="k" style={{ marginTop: 14 }}>{t.hero.metaB}</div>
+            <div className="v">{t.hero.metaBValue}</div>
           </div>
         </div>
       </div>
 
       <div className="scroll-cue" aria-hidden>
-        <span>scroll</span><span className="line" />
+        <span>{t.hero.scroll}</span><span className="line" />
       </div>
     </section>
   );

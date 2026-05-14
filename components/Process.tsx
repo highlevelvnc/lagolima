@@ -1,26 +1,25 @@
-import { PROCESS_STEPS } from "@/data/processSteps";
+"use client";
+import { useT } from "./LangProvider";
 
-/**
- * Reveal dos passos é feito via CSS + IntersectionObserver (em ScrollEffects),
- * com fallback de 3500ms. Não usamos `gsap.from()` para fade-ups: se o plugin
- * não registar ou falhar em headless, a secção inteira ficaria invisível.
- */
+const NUMS = ["01", "02", "03", "04"];
+
 export default function Process() {
+  const { t } = useT();
   return (
     <section className="section process" id="processo">
       <div className="container-x">
         <div className="process-head">
           <div>
-            <span className="eyebrow on-dark" data-reveal>Como Trabalhamos</span>
-            <h2 data-reveal style={{ marginTop: 14 }}>Quatro passos para uma superfície que dura.</h2>
+            <span className="eyebrow on-dark" data-reveal>{t.process.eyebrow}</span>
+            <h2 data-reveal style={{ marginTop: 14 }}>{t.process.title}</h2>
           </div>
-          <p data-reveal>Um processo claro, desde a primeira visita ao espaço até à entrega final da obra.</p>
+          <p data-reveal>{t.process.lead}</p>
         </div>
 
         <div className="steps">
-          {PROCESS_STEPS.map((s) => (
-            <div className="step" key={s.num} data-reveal>
-              <div className="dot" aria-hidden>{s.num}</div>
+          {t.process.steps.map((s, i) => (
+            <div className="step" key={i} data-reveal>
+              <div className="dot" aria-hidden>{NUMS[i]}</div>
               <h4>{s.title}</h4>
               <p>{s.desc}</p>
             </div>

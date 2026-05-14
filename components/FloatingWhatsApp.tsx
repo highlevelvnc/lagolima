@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import { Whatsapp } from "./Icons";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { useT } from "./LangProvider";
 
 export default function FloatingWhatsApp() {
   const [show, setShow] = useState(false);
   const [tip, setTip] = useState(false);
+  const { t } = useT();
 
   useEffect(() => {
     const onScroll = () => {
@@ -32,12 +34,12 @@ export default function FloatingWhatsApp() {
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener"
-        aria-label="Contactar por WhatsApp"
+        aria-label={t.wa}
       >
         <Whatsapp />
       </a>
       <div className={`wa-tip${tip ? " show" : ""}`} aria-hidden>
-        Pedir orçamento por WhatsApp
+        {t.wa}
       </div>
     </>
   );

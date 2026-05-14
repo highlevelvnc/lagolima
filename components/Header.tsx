@@ -2,11 +2,13 @@
 import { useEffect, useState } from "react";
 import Brand from "./Brand";
 import { ArrowRight, Menu, Close } from "./Icons";
-import { NAV_LINKS } from "@/lib/constants";
+import { useT } from "./LangProvider";
+import LangSwitcher from "./LangSwitcher";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { t } = useT();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -19,6 +21,15 @@ export default function Header() {
     document.documentElement.style.overflow = open ? "hidden" : "";
     return () => { document.documentElement.style.overflow = ""; };
   }, [open]);
+
+  const links = [
+    { href: "#inicio", label: t.nav.home },
+    { href: "#servicos", label: t.nav.services },
+    { href: "#projetos", label: t.nav.projects },
+    { href: "#processo", label: t.nav.process },
+    { href: "#sobre", label: t.nav.about },
+    { href: "#contactos", label: t.nav.contact }
+  ];
 
   const onAnchor = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("#")) return;
@@ -33,20 +44,21 @@ export default function Header() {
     <>
       <header className={`header${scrolled ? " is-scrolled" : ""}`} id="header">
         <div className="container-x header-inner">
-          <a href="#inicio" onClick={(e) => onAnchor(e, "#inicio")} aria-label="LAGO LIMA — Início">
+          <a href="#inicio" onClick={(e) => onAnchor(e, "#inicio")} aria-label="LAGO LIMA — Home">
             <Brand />
           </a>
-          <nav className="nav" aria-label="Navegação principal">
-            {NAV_LINKS.map((l) => (
+          <nav className="nav" aria-label="Main">
+            {links.map((l) => (
               <a key={l.href} href={l.href} onClick={(e) => onAnchor(e, l.href)}>{l.label}</a>
             ))}
           </nav>
           <div className="header-cta">
-            <a href="#contactos" onClick={(e) => onAnchor(e, "#contactos")} className="btn btn-primary">
-              Pedir Orçamento <ArrowRight className="arrow" />
+            <LangSwitcher compact />
+            <a href="#contactos" onClick={(e) => onAnchor(e, "#contactos")} className="btn btn-primary magnetic">
+              {t.nav.cta} <ArrowRight className="arrow" />
             </a>
           </div>
-          <button className="menu-btn" onClick={() => setOpen(true)} aria-label="Abrir menu" aria-expanded={open}>
+          <button className="menu-btn" onClick={() => setOpen(true)} aria-label="Open menu" aria-expanded={open}>
             <Menu />
           </button>
         </div>
@@ -54,18 +66,21 @@ export default function Header() {
 
       <aside className={`drawer${open ? " open" : ""}`} aria-hidden={!open} role="dialog">
         <div className="drawer-top">
-          <Brand height={34} />
-          <button className="menu-btn" onClick={() => setOpen(false)} aria-label="Fechar menu" style={{ display: "grid" }}>
+          <Brand height={28} />
+          <button className="menu-btn" onClick={() => setOpen(false)} aria-label="Close menu" style={{ display: "grid" }}>
             <Close />
           </button>
         </div>
-        <nav aria-label="Navegação móvel">
-          {NAV_LINKS.map((l) => (
+        <nav aria-label="Mobile">
+          {links.map((l) => (
             <a key={l.href} href={l.href} onClick={(e) => onAnchor(e, l.href)}>{l.label}</a>
           ))}
         </nav>
+        <div style={{ marginTop: 24 }}>
+          <LangSwitcher />
+        </div>
         <a href="#contactos" onClick={(e) => onAnchor(e, "#contactos")} className="btn btn-primary">
-          Pedir Orçamento <ArrowRight className="arrow" />
+          {t.nav.cta} <ArrowRight className="arrow" />
         </a>
       </aside>
     </>

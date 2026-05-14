@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useT } from "./LangProvider";
 
 /**
  * Loading screen temática (camadas de pavimento + scan estilo aplicação técnica).
@@ -13,6 +14,7 @@ import Image from "next/image";
 export default function Loader() {
   const [hide, setHide] = useState(false);
   const [removed, setRemoved] = useState(false);
+  const { t } = useT();
 
   useEffect(() => {
     const minMs = 600;
@@ -48,7 +50,7 @@ export default function Loader() {
       </div>
 
       <div className="loader-status">
-        <span className="loader-tag">A preparar superfícies</span>
+        <span className="loader-tag">{t.loader.status}</span>
         <span className="loader-dots"><i /><i /><i /></span>
       </div>
 
