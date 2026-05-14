@@ -14,7 +14,7 @@ export const SERVICES: Service[] = [
     num: "01 / SPORT",
     title: "Pavimentos Desportivos",
     desc: "Superfícies para campos, courts e pavilhões. Aderência, amortecimento e durabilidade para uso intensivo.",
-    image: "/projetos/sport-arena.jpg",
+    image: "/projetos/sport-pavilhao-real.jpg",
     icon: "sport",
     span: 2
   },
@@ -23,7 +23,7 @@ export const SERVICES: Service[] = [
     num: "02 / INDUSTRY",
     title: "Pavimentos Industriais",
     desc: "Resinas técnicas e pavimentos contínuos para pavilhões, armazéns e espaços com elevada carga mecânica.",
-    image: "/projetos/industrial-pavilhao.jpg",
+    image: "/projetos/industrial-real.jpg",
     icon: "industry",
     span: 2
   },
@@ -32,7 +32,7 @@ export const SERVICES: Service[] = [
     num: "03 / MICRO",
     title: "Microcimento",
     desc: "Acabamento contínuo e moderno para pavimentos e paredes. Estética premium com alta resistência.",
-    image: "/projetos/micro-interior-glossy.jpg",
+    image: "/projetos/micro-real.jpg",
     icon: "micro",
     span: 2
   },
