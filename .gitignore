@@ -1,0 +1,19 @@
+node_modules
+.next
+out
+build
+dist
+.env*.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+/PHOTO-*.jpg
+/VIDEO-*.mp4
+/stitch_*/
+/.claude/
+
+# brand source files (raw exports)
+/ChatGPT Image*.png
+
+# stitch reference designs (não usado em runtime)
+/public/_stitch/
