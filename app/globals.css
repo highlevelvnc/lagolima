@@ -164,10 +164,13 @@ p { overflow-wrap: break-word; }
 /* impact */
 .impact { background: var(--ink-2); color: var(--white); padding: 64px 0; border-block: 1px solid var(--line); }
 .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); }
-@media (max-width: 900px) { .impact-grid { grid-template-columns: repeat(2, 1fr); } }
-.impact-card { background: var(--ink-2); padding: 36px 28px; display: flex; flex-direction: column; gap: 14px; transition: background .3s var(--easing); }
+@media (max-width: 1024px) { .impact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .impact-grid { grid-template-columns: 1fr; } }
+.impact-card { background: var(--ink-2); padding: 36px 28px; display: flex; flex-direction: column; gap: 14px; transition: background .3s var(--easing); min-width: 0; }
 .impact-card:hover { background: var(--ink-3); }
-.impact-card .num { font-family: var(--font-display), sans-serif; font-size: 42px; font-weight: 800; color: var(--white); line-height: 1; letter-spacing: -0.02em; }
+.impact-card .num { font-family: var(--font-display), sans-serif; font-size: 42px; font-weight: 800; color: var(--white); line-height: 1; letter-spacing: -0.02em; overflow-wrap: break-word; word-break: break-word; }
+@media (max-width: 1024px) and (min-width: 641px) { .impact-card .num { font-size: 34px; } .impact-card { padding: 28px 22px; } }
+@media (max-width: 640px) { .impact { padding: 48px 0; } .impact-card { padding: 26px 22px; } .impact-card .num { font-size: 36px; } }
 .impact-card .num .plus { color: var(--green-400); }
 .impact-card .lbl { font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.2em; color: rgba(255,255,255,.55); text-transform: uppercase; }
 .impact-card p { font-size: 14px; color: rgba(255,255,255,.7); margin: 0; line-height: 1.5; }
