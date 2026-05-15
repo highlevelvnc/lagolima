@@ -16,19 +16,47 @@ const LANG_ALTERNATES = {
   "x-default": "/"
 } as const;
 
+const SHARED_ROBOTS = {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1
+  }
+} as const;
+
+/**
+ * Para Google Search Console: se preferires verificação por meta tag
+ * (em vez de DNS), define NEXT_PUBLIC_GSC_VERIFICATION no env e o token
+ * é injetado automaticamente. Se já verificaste via DNS, ignora.
+ */
+const VERIFICATION = process.env.NEXT_PUBLIC_GSC_VERIFICATION
+  ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+  : undefined;
+
 export const PT_META: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "LAGO LIMA | Pavimentos Desportivos e Industriais",
+    default: "LAGO LIMA | Pavimentos Desportivos e Industriais em Portugal",
     template: "%s · LAGO LIMA"
   },
   description:
-    "Soluções profissionais em pavimentos desportivos e industriais, microcimento, impermeabilização e relva artificial em Portugal.",
+    "Pavimentos desportivos, industriais, microcimento, impermeabilização e relva artificial. Execução profissional em Portugal por equipa especializada. Peça orçamento.",
   keywords: [
     "pavimentos desportivos", "pavimentos industriais", "microcimento",
-    "impermeabilização", "relva artificial", "Portugal"
+    "impermeabilização", "relva artificial", "Portugal", "Ponte de Lima",
+    "pavimentos técnicos", "resinas industriais", "ETICS", "Cappotto"
   ],
+  authors: [{ name: "LAGO LIMA" }],
+  creator: "LAGO LIMA",
+  publisher: "LAGO LIMA",
+  formatDetection: { telephone: true, email: true, address: true },
   alternates: { canonical: "/", languages: LANG_ALTERNATES },
+  robots: SHARED_ROBOTS,
+  verification: VERIFICATION,
   openGraph: {
     type: "website",
     locale: "pt_PT",
@@ -37,56 +65,89 @@ export const PT_META: Metadata = {
     description:
       "Soluções profissionais em pavimentos desportivos e industriais, microcimento, impermeabilização e relva artificial em Portugal.",
     siteName: "LAGO LIMA",
-    url: SITE_URL
+    url: SITE_URL,
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "LAGO LIMA — Pavimentos técnicos em Portugal" }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LAGO LIMA | Pavimentos Desportivos e Industriais",
+    description: "Pavimentos técnicos, microcimento, impermeabilização e relva artificial. Execução profissional em Portugal.",
+    images: ["/og.jpg"]
   }
 };
 
 export const EN_META: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "LAGO LIMA | Sports & Industrial Flooring",
+    default: "LAGO LIMA | Sports & Industrial Flooring in Portugal",
     template: "%s · LAGO LIMA"
   },
   description:
-    "Professional sports and industrial flooring, microcement, waterproofing and artificial turf solutions across Portugal.",
+    "Sports flooring, industrial flooring, microcement, waterproofing and artificial turf. Professional execution across Portugal. Get a quote.",
   keywords: [
     "sports flooring", "industrial flooring", "microcement",
-    "waterproofing", "artificial turf", "Portugal"
+    "waterproofing", "artificial turf", "Portugal", "technical flooring",
+    "epoxy floors", "ETICS", "Cappotto"
   ],
+  authors: [{ name: "LAGO LIMA" }],
+  creator: "LAGO LIMA",
+  publisher: "LAGO LIMA",
   alternates: { canonical: "/en", languages: LANG_ALTERNATES },
+  robots: SHARED_ROBOTS,
+  verification: VERIFICATION,
   openGraph: {
     type: "website",
     locale: "en_GB",
     alternateLocale: ["pt_PT", "de_DE"],
     title: "LAGO LIMA | Sports & Industrial Flooring",
     description:
-      "Professional sports and industrial flooring, microcement, waterproofing and artificial turf solutions across Portugal.",
+      "Professional sports and industrial flooring, microcement, waterproofing and artificial turf across Portugal.",
     siteName: "LAGO LIMA",
-    url: `${SITE_URL}/en`
+    url: `${SITE_URL}/en`,
+    images: [{ url: "/og-en.jpg", width: 1200, height: 630, alt: "LAGO LIMA — Technical flooring in Portugal" }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LAGO LIMA | Sports & Industrial Flooring",
+    description: "Technical flooring, microcement, waterproofing and artificial turf in Portugal.",
+    images: ["/og-en.jpg"]
   }
 };
 
 export const DE_META: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "LAGO LIMA | Sport- und Industrieböden",
+    default: "LAGO LIMA | Sport- und Industrieböden in Portugal",
     template: "%s · LAGO LIMA"
   },
   description:
-    "Professionelle Lösungen für Sport- und Industrieböden, Mikrozement, Abdichtungen und Kunstrasen in Portugal.",
+    "Sportböden, Industrieböden, Mikrozement, Abdichtungen und Kunstrasen. Professionelle Ausführung in ganz Portugal. Angebot anfordern.",
   keywords: [
     "Sportböden", "Industrieböden", "Mikrozement",
-    "Abdichtung", "Kunstrasen", "Portugal"
+    "Abdichtung", "Kunstrasen", "Portugal", "technische Böden",
+    "Epoxidböden", "ETICS", "Cappotto"
   ],
+  authors: [{ name: "LAGO LIMA" }],
+  creator: "LAGO LIMA",
+  publisher: "LAGO LIMA",
   alternates: { canonical: "/de", languages: LANG_ALTERNATES },
+  robots: SHARED_ROBOTS,
+  verification: VERIFICATION,
   openGraph: {
     type: "website",
     locale: "de_DE",
     alternateLocale: ["pt_PT", "en_GB"],
     title: "LAGO LIMA | Sport- und Industrieböden",
     description:
-      "Professionelle Lösungen für Sport- und Industrieböden, Mikrozement, Abdichtungen und Kunstrasen in Portugal.",
+      "Professionelle Sport- und Industrieböden, Mikrozement, Abdichtung und Kunstrasen in Portugal.",
     siteName: "LAGO LIMA",
-    url: `${SITE_URL}/de`
+    url: `${SITE_URL}/de`,
+    images: [{ url: "/og-de.jpg", width: 1200, height: 630, alt: "LAGO LIMA — Technische Böden in Portugal" }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LAGO LIMA | Sport- und Industrieböden",
+    description: "Technische Böden, Mikrozement, Abdichtung und Kunstrasen in Portugal.",
+    images: ["/og-de.jpg"]
   }
 };
