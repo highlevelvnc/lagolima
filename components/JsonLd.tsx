@@ -14,16 +14,30 @@ const PHONE_E164 = "+351964783836";
 const SERVICE_NAMES: Record<Lang, string[]> = {
   pt: ["Pavimentos Desportivos", "Pavimentos Industriais", "Microcimento", "Impermeabilização", "Relva Artificial"],
   en: ["Sports Flooring", "Industrial Flooring", "Microcement", "Waterproofing", "Artificial Turf"],
-  de: ["Sportböden", "Industrieböden", "Mikrozement", "Abdichtung", "Kunstrasen"]
+  de: ["Sportböden", "Industrieböden", "Mikrozement", "Abdichtung", "Kunstrasen"],
+  fr: ["Sols Sportifs", "Sols Industriels", "Microciment", "Étanchéité", "Gazon Synthétique"],
+  es: ["Pavimentos Deportivos", "Pavimentos Industriales", "Microcemento", "Impermeabilización", "Césped Artificial"]
 };
 
 const DESC: Record<Lang, string> = {
   pt: "Pavimentos desportivos, industriais, microcimento, impermeabilização e relva artificial. Execução profissional em Portugal.",
   en: "Sports flooring, industrial flooring, microcement, waterproofing and artificial turf. Professional execution across Portugal.",
-  de: "Sportböden, Industrieböden, Mikrozement, Abdichtungen und Kunstrasen. Professionelle Ausführung in ganz Portugal."
+  de: "Sportböden, Industrieböden, Mikrozement, Abdichtungen und Kunstrasen. Professionelle Ausführung in ganz Portugal.",
+  fr: "Sols sportifs, sols industriels, microciment, étanchéité et gazon synthétique. Exécution professionnelle au Portugal.",
+  es: "Pavimentos deportivos, industriales, microcemento, impermeabilización y césped artificial. Ejecución profesional en Portugal."
 };
 
-const AREA: Record<Lang, string> = { pt: "Portugal Continental", en: "Mainland Portugal", de: "Festland-Portugal" };
+const AREA: Record<Lang, string> = {
+  pt: "Portugal Continental",
+  en: "Mainland Portugal",
+  de: "Festland-Portugal",
+  fr: "Portugal continental",
+  es: "Portugal continental"
+};
+
+const CATALOG: Record<Lang, string> = {
+  pt: "Serviços", en: "Services", de: "Leistungen", fr: "Prestations", es: "Servicios"
+};
 
 export default function JsonLd({ lang }: Props) {
   const url = lang === "pt" ? SITE_URL : `${SITE_URL}/${lang}`;
@@ -64,7 +78,7 @@ export default function JsonLd({ lang }: Props) {
     parentOrganization: { "@id": `${SITE_URL}#organization` },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: lang === "pt" ? "Serviços" : lang === "de" ? "Leistungen" : "Services",
+      name: CATALOG[lang],
       itemListElement: SERVICE_NAMES[lang].map((n, i) => ({
         "@type": "Offer",
         position: i + 1,

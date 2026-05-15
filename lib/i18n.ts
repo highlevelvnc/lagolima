@@ -1,5 +1,5 @@
-export type Lang = "pt" | "en" | "de";
-export const LANGS: Lang[] = ["pt", "en", "de"];
+export type Lang = "pt" | "en" | "de" | "fr" | "es";
+export const LANGS: Lang[] = ["pt", "en", "de", "fr", "es"];
 export const DEFAULT_LANG: Lang = "pt";
 
 type Dict = typeof DICT.pt;
@@ -616,6 +616,414 @@ export const DICT = {
     skipLink: "Zum Inhalt springen",
     backToTop: "Nach oben",
     wa: "Per WhatsApp schreiben"
+  },
+  fr: {
+    nav: {
+      home: "Accueil",
+      services: "Prestations",
+      projects: "Projets",
+      process: "Démarche",
+      about: "À propos",
+      contact: "Contact",
+      cta: "Demander un devis"
+    },
+    hero: {
+      eyebrow: "REVÊTEMENTS TECHNIQUES · PORTUGAL",
+      titleWords: [
+        { text: "Revêtements" },
+        { text: "techniques" },
+        { text: "pour le", accent: false },
+        { text: "sport,", accent: true },
+        { text: "l'industrie" },
+        { text: "et" },
+        { text: "des finitions" },
+        { text: "professionnelles." }
+      ],
+      lead: "Solutions durables en sols sportifs, microciment, étanchéité et gazon synthétique pour des projets exigeants partout au Portugal.",
+      ctaPrimary: "Demander un devis",
+      ctaSecondary: "Voir les prestations",
+      metaA: "Spécialité",
+      metaAValue: "Revêtements techniques",
+      metaB: "Application",
+      metaBValue: "Sport · Industrie",
+      metaC: "Couverture",
+      metaCValue: "Portugal continental",
+      scroll: "scroll"
+    },
+    impact: [
+      { lbl: "01 — Projet", title: "Sur", accent: "mesure", desc: "Chaque espace est évalué et conçu avec la solution technique adaptée." },
+      { lbl: "02 — Matériaux", title: "Solutions", accent: "résistantes", desc: "Matériaux sélectionnés pour un usage intensif, en extérieur et environnements industriels." },
+      { lbl: "03 — Exécution", title: "Finition", accent: "professionnelle", desc: "Mise en œuvre rigoureuse, attention au détail et respect des délais." },
+      { lbl: "04 — Équipe", title: "Expertise", accent: "technique", desc: "Équipe spécialisée en revêtements sportifs, industriels et techniques." }
+    ],
+    services: {
+      eyebrow: "Prestations",
+      title: "Des surfaces techniques pensées pour chaque exigence.",
+      lead: "Du terrain sportif au hall industriel, de l'habitation privée à l'espace commercial — des solutions complètes exécutées par des professionnels.",
+      more: "En savoir plus",
+      items: {
+        "pavimentos-desportivos": { title: "Sols Sportifs", desc: "Surfaces pour terrains, courts et halles. Adhérence, amortissement et durabilité pour un usage intensif." },
+        "pavimentos-industriais": { title: "Sols Industriels", desc: "Résines techniques et revêtements continus pour halls, entrepôts et zones à forte charge mécanique." },
+        "microcimento": { title: "Microciment", desc: "Finition continue et moderne pour sols et murs. Esthétique premium avec une grande résistance." },
+        "impermeabilizacao": { title: "Étanchéité", desc: "Toitures, terrasses, balcons et fondations. Protection totale contre infiltrations et humidité." },
+        "relva-artificial": { title: "Gazon Synthétique", desc: "Pose sur terrains, jardins et zones extérieures. Aspect naturel sans entretien contraignant." }
+      }
+    },
+    extras: {
+      eyebrow: "Solutions Complémentaires",
+      title: "Au-delà du sol,",
+      titleAccent: "le chantier complet",
+      lead: "Nous proposons aussi le bardage de façades, l'isolation thermique et la réhabilitation structurelle — pour mener les chantiers les plus complexes avec un seul interlocuteur.",
+      items: {
+        "isolamento": { tag: "Isolation", title: "Isolation de Façades", desc: "Systèmes thermiques et acoustiques haute performance (ETICS / Cappotto) avec efficacité énergétique et durabilité certifiées." },
+        "remodelacao": { tag: "Intérieurs", title: "Rénovation", desc: "Transformation d'espaces avec finitions premium et exécution technique rigoureuse pour projets résidentiels et commerciaux." },
+        "reabilitacao": { tag: "Structure", title: "Réhabilitation", desc: "Restauration esthétique et fonctionnelle des bâtiments — préservation patrimoniale et renforcement structurel avec des matériaux certifiés." }
+      }
+    },
+    resist: {
+      eyebrow: "Promesse Technique",
+      title1: "Des surfaces qui durent.",
+      title2: "Des finitions",
+      title2Suffix: "qui valorisent.",
+      lead: "Chaque projet exige la bonne réponse. LAGO LIMA combine analyse technique, matériaux adaptés et exécution professionnelle pour créer des surfaces durables et soignées.",
+      benefits: [
+        { idx: "/01", title: "Résistance et durabilité", desc: "Matériaux et couches conçus pour un usage intensif et de longue durée." },
+        { idx: "/02", title: "Exécution technique spécialisée", desc: "Une équipe formée aux revêtements continus, sportifs et industriels." },
+        { idx: "/03", title: "Solutions adaptées au lieu", desc: "Chaque projet commence par une analyse rigoureuse du site et de l'usage." },
+        { idx: "/04", title: "Matériaux adaptés à l'usage", desc: "Spécification technique en fonction de la charge, exposition et trafic." },
+        { idx: "/05", title: "Finitions propres et professionnelles", desc: "Attention aux joints, raccords et surfaces finales." },
+        { idx: "/06", title: "Délais respectés", desc: "Planification réaliste, livraisons dans le calendrier convenu." }
+      ]
+    },
+    banner: {
+      eyebrow: "Ingénierie des Surfaces",
+      title1: "Nous concevons des surfaces prêtes pour un",
+      titleAccent: "usage intensif",
+      title2: ", la performance et la longue durée.",
+      marks: ["ANTIDÉRAPANT", "RÉSISTANT UV", "USAGE INTENSIF", "FORTE ADHÉRENCE"]
+    },
+    applications: {
+      eyebrow: "Applications",
+      title: "Pour les espaces qui exigent plus qu'une simple surface.",
+      lead: "Des solutions pensées pour différents contextes, du sport à l'habitation privée.",
+      items: [
+        { tag: "/ 01 SPORT", title: "Terrains sportifs", desc: "Sols techniques pour football, padel, basketball et disciplines multiples." },
+        { tag: "/ 02 INDUSTRIE", title: "Halls industriels", desc: "Résines et revêtements continus pour fortes charges." },
+        { tag: "/ 03 LOGISTIQUE", title: "Entrepôts", desc: "Surfaces conçues pour un trafic intense et des opérations lourdes." },
+        { tag: "/ 04 ÉDUCATION", title: "Écoles et clubs", desc: "Cours, terrains multisports et halles pour usage quotidien." },
+        { tag: "/ 05 HABITAT", title: "Habitations", desc: "Microciment, terrasses étanches et finitions continues." },
+        { tag: "/ 06 COMMERCE", title: "Espaces commerciaux", desc: "Sols à l'esthétique premium et haute résistance à l'usure." },
+        { tag: "/ 07 EXTÉRIEUR", title: "Zones extérieures", desc: "Surfaces résistantes à la pluie, au soleil et aux écarts de température." },
+        { tag: "/ 08 JARDIN", title: "Jardins en gazon synthétique", desc: "Solution esthétique, durable et à faible entretien." }
+      ]
+    },
+    process: {
+      eyebrow: "Notre Démarche",
+      title: "Quatre étapes pour une surface qui dure.",
+      lead: "Une démarche claire, de la première visite à la livraison finale.",
+      steps: [
+        { title: "Évaluation du site", desc: "Visite technique, analyse du support, identification des besoins et des contraintes d'usage." },
+        { title: "Proposition de solution", desc: "Devis technique avec matériau adapté, système constructif et estimation détaillée." },
+        { title: "Préparation de la surface", desc: "Traitement du support, ragréage et primaires pour garantir adhérence et longévité." },
+        { title: "Application et livraison", desc: "Mise en œuvre par une équipe spécialisée, contrôle qualité et remise du chantier." }
+      ]
+    },
+    projects: {
+      eyebrow: "Projets",
+      title: "Du travail technique dans des contextes variés.",
+      lead: "Une sélection de typologies et d'environnements où LAGO LIMA intervient.",
+      filters: ["Tous", "Sport", "Industriel", "Microciment", "Étanchéité", "Gazon synthétique"] as const,
+      items: {
+        p1: { title: "Salle multifonction premium", category: "Sport" },
+        p2: { title: "Transformation de hall", category: "Industriel" },
+        p3: { title: "Finition continue brillante", category: "Microciment" },
+        p4: { title: "Piscine et espace extérieur", category: "Étanchéité" },
+        p5: { title: "Terrain en gazon synthétique", category: "Gazon synthétique" },
+        p6: { title: "Terrain multisport extérieur", category: "Sport" },
+        p7: { title: "Sol industriel technique", category: "Industriel" },
+        p8: { title: "Jardin en gazon synthétique", category: "Gazon synthétique" },
+        p9: { title: "Terrasse étanche", category: "Étanchéité" }
+      }
+    },
+    about: {
+      eyebrow: "À propos",
+      title: "Ingénierie des sols. Engagement sur chaque mètre carré.",
+      lead: "LAGO LIMA réalise des revêtements sportifs et industriels et propose des solutions techniques en microciment, étanchéité et gazon synthétique. Avec un accent sur la résistance, la finition et la qualité d'exécution, nous développons des solutions adaptées à chaque espace.",
+      chips: ["Microciment", "Résine", "Étanchéité", "Gazon"],
+      values: [
+        { label: "Qualité" },
+        { label: "Résistance" },
+        { label: "Confiance" },
+        { label: "Précision" },
+        { label: "Durabilité" }
+      ]
+    },
+    cta: {
+      eyebrow: "Étape suivante",
+      title1: "Un",
+      titleAccent: "projet",
+      title2: "en vue ?",
+      lead: "Contactez-nous et recevez une proposition adaptée à votre espace, votre objectif et votre budget.",
+      primary: "Demander un devis",
+      whatsapp: "Écrire sur WhatsApp"
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "Obtenez une proposition pour votre projet.",
+      lead: "Remplissez le formulaire avec le plus de détails possible. Nous répondons avec une proposition technique adaptée.",
+      labels: {
+        name: "Nom",
+        phone: "Téléphone",
+        email: "Email",
+        location: "Localité",
+        service: "Type de prestation",
+        message: "Message"
+      },
+      placeholders: {
+        name: "Votre nom",
+        phone: "+351 9XX XXX XXX",
+        email: "email@exemple.fr",
+        location: "Ville / Région",
+        message: "Décrivez l'espace, la surface approximative et le délai souhaité..."
+      },
+      serviceOptions: [
+        "Sols Sportifs",
+        "Sols Industriels",
+        "Microciment",
+        "Étanchéité",
+        "Gazon Synthétique",
+        "Autre / Combiné"
+      ],
+      submit: "Envoyer la demande",
+      sent: "Demande reçue — merci !",
+      side: {
+        sub: "Parler à l'équipe",
+        title: "Nous sommes disponibles pour échanger sur votre projet.",
+        phoneLbl: "Téléphone / WhatsApp",
+        emailLbl: "Email",
+        coverageLbl: "Couverture",
+        coverageVal: "Portugal continental",
+        replyLbl: "Réponse",
+        replyVal: "Sous 24h ouvrées"
+      }
+    },
+    footer: {
+      desc: "Sols sportifs et industriels.\nMicrociment · Étanchéité · Gazon synthétique.",
+      tagline: "Nous construisons des surfaces. Nous livrons des résultats.",
+      navTitle: "Navigation",
+      servicesTitle: "Prestations",
+      contactTitle: "Contact",
+      rights: "Tous droits réservés",
+      ribbon: "PT · Revêtements techniques"
+    },
+    loader: { status: "Préparation des surfaces" },
+    skipLink: "Aller au contenu",
+    backToTop: "Retour en haut",
+    wa: "Écrire sur WhatsApp"
+  },
+  es: {
+    nav: {
+      home: "Inicio",
+      services: "Servicios",
+      projects: "Proyectos",
+      process: "Proceso",
+      about: "Sobre Nosotros",
+      contact: "Contacto",
+      cta: "Solicitar Presupuesto"
+    },
+    hero: {
+      eyebrow: "PAVIMENTOS TÉCNICOS · PORTUGAL",
+      titleWords: [
+        { text: "Pavimentos" },
+        { text: "técnicos" },
+        { text: "para" },
+        { text: "deporte,", accent: true },
+        { text: "industria" },
+        { text: "y" },
+        { text: "acabados" },
+        { text: "profesionales." }
+      ],
+      lead: "Soluciones duraderas en pavimentos deportivos, microcemento, impermeabilización y césped artificial para obras exigentes en todo Portugal.",
+      ctaPrimary: "Solicitar Presupuesto",
+      ctaSecondary: "Ver Servicios",
+      metaA: "Especialidad",
+      metaAValue: "Pavimentos técnicos",
+      metaB: "Aplicación",
+      metaBValue: "Deportivos · Industriales",
+      metaC: "Cobertura",
+      metaCValue: "Portugal continental",
+      scroll: "scroll"
+    },
+    impact: [
+      { lbl: "01 — Proyecto", title: "A", accent: "medida", desc: "Cada espacio se evalúa y se diseña con la solución técnica adecuada." },
+      { lbl: "02 — Materiales", title: "Soluciones", accent: "resistentes", desc: "Materiales seleccionados para uso intensivo, exterior y entornos industriales." },
+      { lbl: "03 — Ejecución", title: "Acabado", accent: "profesional", desc: "Aplicación rigurosa, atención al detalle y cumplimiento de plazos." },
+      { lbl: "04 — Equipo", title: "Aplicación", accent: "técnica", desc: "Equipo especializado en pavimentos deportivos, industriales y técnicos." }
+    ],
+    services: {
+      eyebrow: "Servicios",
+      title: "Pavimentos y superficies técnicas para cada exigencia.",
+      lead: "Desde la pista deportiva hasta la nave industrial, de la vivienda al espacio comercial — soluciones completas con ejecución profesional.",
+      more: "Saber más",
+      items: {
+        "pavimentos-desportivos": { title: "Pavimentos Deportivos", desc: "Superficies para canchas, pistas y polideportivos. Adherencia, amortiguación y durabilidad para uso intensivo." },
+        "pavimentos-industriais": { title: "Pavimentos Industriales", desc: "Resinas técnicas y pavimentos continuos para naves, almacenes y espacios con alta carga mecánica." },
+        "microcimento": { title: "Microcemento", desc: "Acabado continuo y moderno para suelos y paredes. Estética premium con alta resistencia." },
+        "impermeabilizacao": { title: "Impermeabilización", desc: "Cubiertas, terrazas, balcones y cimentaciones. Protección total contra filtraciones y humedad." },
+        "relva-artificial": { title: "Césped Artificial", desc: "Instalación en campos, jardines y zonas exteriores. Estética natural con mantenimiento mínimo." }
+      }
+    },
+    extras: {
+      eyebrow: "Soluciones Complementarias",
+      title: "Más allá del pavimento,",
+      titleAccent: "la obra completa",
+      lead: "También ofrecemos trabajos de fachada, aislamiento térmico y rehabilitación estructural — para responder a las obras más exigentes con un único interlocutor.",
+      items: {
+        "isolamento": { tag: "Aislamiento", title: "Aislamiento de Fachadas", desc: "Sistemas térmicos y acústicos de alto rendimiento (ETICS / Cappotto) con eficiencia energética y durabilidad certificadas." },
+        "remodelacao": { tag: "Interiores", title: "Reforma", desc: "Transformación de espacios con acabados premium y ejecución técnica rigurosa para proyectos residenciales y comerciales." },
+        "reabilitacao": { tag: "Estructura", title: "Rehabilitación", desc: "Restauración estética y funcional de edificios — conservación patrimonial y refuerzo estructural con materiales certificados." }
+      }
+    },
+    resist: {
+      eyebrow: "Promesa Técnica",
+      title1: "Superficies que resisten.",
+      title2: "Acabados",
+      title2Suffix: "que valorizan.",
+      lead: "Cada proyecto exige la solución correcta. LAGO LIMA combina análisis técnico, materiales adecuados y ejecución profesional para crear superficies duraderas y visualmente cuidadas.",
+      benefits: [
+        { idx: "/01", title: "Resistencia y durabilidad", desc: "Materiales y capas pensadas para uso intensivo y a largo plazo." },
+        { idx: "/02", title: "Ejecución técnica especializada", desc: "Equipo formado en pavimentos continuos, deportivos e industriales." },
+        { idx: "/03", title: "Soluciones adaptadas al espacio", desc: "Cada proyecto empieza con un análisis riguroso del lugar y del uso." },
+        { idx: "/04", title: "Materiales acordes al uso", desc: "Especificación técnica según carga, exposición y tránsito." },
+        { idx: "/05", title: "Acabados limpios y profesionales", desc: "Atención al detalle en juntas, remates y superficies finales." },
+        { idx: "/06", title: "Cumplimiento de plazos", desc: "Planificación realista, entregas dentro del calendario acordado." }
+      ]
+    },
+    banner: {
+      eyebrow: "Ingeniería de Superficies",
+      title1: "Construimos superficies preparadas para",
+      titleAccent: "uso intensivo",
+      title2: ", rendimiento y larga duración.",
+      marks: ["ANTIDESLIZANTE", "RESISTENTE UV", "USO INTENSIVO", "ALTA ADHERENCIA"]
+    },
+    applications: {
+      eyebrow: "Aplicaciones",
+      title: "Para espacios que exigen más que una superficie.",
+      lead: "Soluciones pensadas para distintos contextos, del deporte a la vivienda privada.",
+      items: [
+        { tag: "/ 01 DEPORTE", title: "Campos deportivos", desc: "Suelos técnicos para fútbol, pádel, baloncesto y múltiples disciplinas." },
+        { tag: "/ 02 INDUSTRIA", title: "Naves industriales", desc: "Resinas y pavimentos continuos para cargas elevadas." },
+        { tag: "/ 03 LOGÍSTICA", title: "Almacenes", desc: "Superficies preparadas para tráfico intenso y operativa pesada." },
+        { tag: "/ 04 EDUCACIÓN", title: "Colegios y clubes", desc: "Patios, polideportivos y pabellones de uso diario." },
+        { tag: "/ 05 VIVIENDA", title: "Viviendas", desc: "Microcemento, terrazas impermeables y acabados continuos." },
+        { tag: "/ 06 RETAIL", title: "Espacios comerciales", desc: "Suelos con estética premium y alta resistencia al uso." },
+        { tag: "/ 07 EXTERIOR", title: "Zonas exteriores", desc: "Suelos resistentes a lluvia, sol y variaciones térmicas." },
+        { tag: "/ 08 JARDÍN", title: "Jardines con césped artificial", desc: "Solución estética, duradera y de bajo mantenimiento." }
+      ]
+    },
+    process: {
+      eyebrow: "Cómo Trabajamos",
+      title: "Cuatro pasos para una superficie que dura.",
+      lead: "Un proceso claro, desde la primera visita hasta la entrega final.",
+      steps: [
+        { title: "Análisis del espacio", desc: "Visita técnica, evaluación del soporte, identificación de necesidades y exigencias de uso." },
+        { title: "Propuesta de solución", desc: "Presupuesto técnico con material adecuado, sistema constructivo y estimación detallada." },
+        { title: "Preparación de la superficie", desc: "Tratamiento del soporte, regularización e imprimaciones para garantizar adherencia y durabilidad." },
+        { title: "Aplicación y entrega", desc: "Ejecución por equipo especializado, control de calidad y entrega final de la obra." }
+      ]
+    },
+    projects: {
+      eyebrow: "Proyectos",
+      title: "Trabajo técnico en distintos contextos.",
+      lead: "Una selección de tipologías y entornos en los que LAGO LIMA actúa.",
+      filters: ["Todos", "Deportivo", "Industrial", "Microcemento", "Impermeabilización", "Césped Artificial"] as const,
+      items: {
+        p1: { title: "Polideportivo multiusos premium", category: "Deportivo" },
+        p2: { title: "Transformación de pabellón", category: "Industrial" },
+        p3: { title: "Acabado continuo brillante", category: "Microcemento" },
+        p4: { title: "Piscina y zona exterior", category: "Impermeabilización" },
+        p5: { title: "Campo de césped sintético", category: "Césped Artificial" },
+        p6: { title: "Polideportivo exterior", category: "Deportivo" },
+        p7: { title: "Pavimento industrial técnico", category: "Industrial" },
+        p8: { title: "Jardín con césped artificial", category: "Césped Artificial" },
+        p9: { title: "Terraza impermeable", category: "Impermeabilización" }
+      }
+    },
+    about: {
+      eyebrow: "Sobre Nosotros",
+      title: "Ingeniería de pavimentos. Compromiso con cada metro.",
+      lead: "LAGO LIMA ejecuta pavimentos deportivos e industriales, ofreciendo soluciones técnicas en microcemento, impermeabilización y césped artificial. Con foco en la resistencia, el acabado y la calidad de ejecución, desarrollamos soluciones adaptadas a las necesidades de cada espacio.",
+      chips: ["Microcemento", "Resina", "Impermeabilización", "Césped"],
+      values: [
+        { label: "Calidad" },
+        { label: "Resistencia" },
+        { label: "Confianza" },
+        { label: "Precisión" },
+        { label: "Durabilidad" }
+      ]
+    },
+    cta: {
+      eyebrow: "Siguiente paso",
+      title1: "¿Tienes un",
+      titleAccent: "proyecto",
+      title2: "en mente?",
+      lead: "Contáctanos y recibe una propuesta ajustada a tu espacio, objetivo y presupuesto.",
+      primary: "Solicitar Presupuesto",
+      whatsapp: "Contactar por WhatsApp"
+    },
+    contact: {
+      eyebrow: "Contacto",
+      title: "Recibe una propuesta para tu proyecto.",
+      lead: "Rellena el formulario con el máximo detalle posible. Respondemos con una propuesta técnica adecuada.",
+      labels: {
+        name: "Nombre",
+        phone: "Teléfono",
+        email: "Email",
+        location: "Localidad",
+        service: "Tipo de servicio",
+        message: "Mensaje"
+      },
+      placeholders: {
+        name: "Tu nombre",
+        phone: "+351 9XX XXX XXX",
+        email: "email@ejemplo.es",
+        location: "Ciudad / Provincia",
+        message: "Describe el espacio, la superficie aproximada y el plazo deseado..."
+      },
+      serviceOptions: [
+        "Pavimentos Deportivos",
+        "Pavimentos Industriales",
+        "Microcemento",
+        "Impermeabilización",
+        "Césped Artificial",
+        "Otro / Combinado"
+      ],
+      submit: "Enviar Solicitud",
+      sent: "Solicitud recibida — ¡gracias!",
+      side: {
+        sub: "Hablar con el equipo",
+        title: "Estamos disponibles para resolver tu proyecto.",
+        phoneLbl: "Teléfono / WhatsApp",
+        emailLbl: "Email",
+        coverageLbl: "Cobertura",
+        coverageVal: "Portugal continental",
+        replyLbl: "Respuesta",
+        replyVal: "En 24h laborales"
+      }
+    },
+    footer: {
+      desc: "Pavimentos deportivos e industriales.\nMicrocemento · Impermeabilización · Césped artificial.",
+      tagline: "Construimos superficies. Entregamos resultados.",
+      navTitle: "Navegación",
+      servicesTitle: "Servicios",
+      contactTitle: "Contacto",
+      rights: "Todos los derechos reservados",
+      ribbon: "PT · Pavimentos técnicos"
+    },
+    loader: { status: "Preparando superficies" },
+    skipLink: "Saltar al contenido",
+    backToTop: "Volver arriba",
+    wa: "Contactar por WhatsApp"
   }
 } as const;
 
