@@ -202,7 +202,8 @@ export const DICT = {
       servicesTitle: "Serviços",
       contactTitle: "Contactos",
       rights: "Todos os direitos reservados",
-      ribbon: "PT · Pavimentos Técnicos"
+      ribbon: "PT · Pavimentos Técnicos",
+      builtBy: "Site criado por"
     },
     loader: { status: "A preparar superfícies" },
     skipLink: "Saltar para o conteúdo",
@@ -406,7 +407,8 @@ export const DICT = {
       servicesTitle: "Services",
       contactTitle: "Contact",
       rights: "All rights reserved",
-      ribbon: "PT · Technical Flooring"
+      ribbon: "PT · Technical Flooring",
+      builtBy: "Site built by"
     },
     loader: { status: "Preparing surfaces" },
     skipLink: "Skip to content",
@@ -610,7 +612,8 @@ export const DICT = {
       servicesTitle: "Leistungen",
       contactTitle: "Kontakt",
       rights: "Alle Rechte vorbehalten",
-      ribbon: "PT · Technische Böden"
+      ribbon: "PT · Technische Böden",
+      builtBy: "Website erstellt von"
     },
     loader: { status: "Oberflächen vorbereiten" },
     skipLink: "Zum Inhalt springen",
@@ -814,7 +817,8 @@ export const DICT = {
       servicesTitle: "Prestations",
       contactTitle: "Contact",
       rights: "Tous droits réservés",
-      ribbon: "PT · Revêtements techniques"
+      ribbon: "PT · Revêtements techniques",
+      builtBy: "Site réalisé par"
     },
     loader: { status: "Préparation des surfaces" },
     skipLink: "Aller au contenu",
@@ -1018,7 +1022,8 @@ export const DICT = {
       servicesTitle: "Servicios",
       contactTitle: "Contacto",
       rights: "Todos los derechos reservados",
-      ribbon: "PT · Pavimentos técnicos"
+      ribbon: "PT · Pavimentos técnicos",
+      builtBy: "Sitio creado por"
     },
     loader: { status: "Preparando superficies" },
     skipLink: "Saltar al contenido",

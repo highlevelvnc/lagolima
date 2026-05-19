@@ -52,6 +52,12 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© {year} LAGO LIMA · {t.footer.rights}</span>
+          <span className="footer-credit">
+            {t.footer.builtBy}{" "}
+            <a href="https://highlevelmkt.com" target="_blank" rel="noopener noreferrer">
+              highlevelmkt.com
+            </a>
+          </span>
           <span>{t.footer.ribbon}</span>
         </div>
       </div>
